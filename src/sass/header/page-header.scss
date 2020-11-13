@@ -1,0 +1,19 @@
+@import "../stuff/variables.scss";
+
+.page-header {
+	position: absolute;
+	
+	width: 100%;
+	top: 0;
+}
+
+.page-header__nojs {
+	position: static;
+}
+
+@media (min-width: $desktop-width) {
+	.page-header__nojs {
+		position: absolute;
+	}
+}
+

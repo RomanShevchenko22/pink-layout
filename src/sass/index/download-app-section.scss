@@ -1,0 +1,187 @@
+@import "../stuff/variables.scss";
+
+.download-app {	
+	display: flex;
+	flex-direction: column;
+
+	padding-top: 64px;
+
+	background-color: $text-blue;
+	background-image: url("../img/back-tablet@1x.jpg");
+	background-repeat: no-repeat;
+	background-position: top;		
+	&__wrapper-list {		
+		margin-top: 396px;
+		background-color: $bg-darkblue;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -286px;
+			left: 50%;
+			margin-left: -160px;
+
+			width: 256px;
+			height: 286px;
+
+			background-image: url("../img/download-hand.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 256px 286px;
+		}
+	}
+	&__phrase {
+		display: none;
+	}
+	&__link {
+		width: 284px;
+		margin: 0 auto;
+		padding-top: 28px;
+		margin-bottom: 32px;
+	}
+	&__list {	
+		display: flex;
+		justify-content: space-between;
+
+		width: 205px;
+		margin: 0 auto;
+		margin-bottom: 27px;
+
+		list-style: none;		
+	}
+	&__list-item {
+		display: inline-block;
+		&--apple {
+		  display: block;
+		  width: 43px;
+		  height: 56px;
+		  background-image: url("../img/logotype-apple.svg");
+		  background-repeat: no-repeat;
+			background-size: 43px 56px;
+			background-position: bottom;
+		}
+		&--android {
+		  display: block;
+		  width: 43px;
+		  height: 56px;
+		  background-image: url("../img/logotype-android.svg");
+		  background-repeat: no-repeat;
+			background-size: 43px 50px;
+			background-position: bottom;
+		}
+		&--windows {
+		  display: block;
+		  width: 43px;
+		  height: 56px;
+		  background-image: url("../img/logotype-windows.svg");
+		  background-repeat: no-repeat;
+			background-size: 43px 50px;
+			background-position: 0 6px;
+		}
+	}
+	&__legend {
+	display: block;
+	padding-bottom: 33px;
+
+	color: $bg-white;	
+	text-align: center;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 200;	
+	}
+}
+
+.download-app__nojs {
+	padding-top: 0;
+}
+
+@media (min-width: $tablet-width) {
+	.download-app {
+		flex-direction: initial;
+
+		padding-top: 110px;
+
+		background-color: $text-blue;
+		background-image: url("../img/back-tablet@1x.jpg");
+		background-repeat: no-repeat;
+		background-position: top;
+		
+		&__phrase {
+			display: block;
+			margin-bottom: 40px;
+
+			color: $bg-white;
+			font-size: 40px;
+			line-height: 47px;
+			font-weight: 200;
+			text-align: center;
+		}
+		&__wrapper {
+			width: 620px;
+			min-height: 619px;
+			margin: 0 auto;	
+
+			background-image: url("../img/download-hand.png");
+			background-repeat: no-repeat;
+			background-position: 148px 80px;
+			background-size: 468px 545px;
+		}
+		&__wrapper-list {
+			width: 300px;
+			margin-top: 90px;
+		
+			text-align: center;	
+
+			background-color: transparent;			
+			&::before {
+				display: none;
+			}
+		}
+		&__list {
+			margin-top: 0;
+			margin-bottom: 40px;
+		}
+		&__link {
+			width: 300px;
+			padding-top: 0;
+			margin-bottom: 46px;
+		}
+		&__legend {
+			padding-bottom: 0;
+		}
+	}
+	.download-app__nojs {
+		padding-top: 0;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.download-app {
+		background-color: $text-blue;
+		background-image: url("../img/back-desktop.jpg");
+		background-repeat: no-repeat;
+		background-position: top;
+		&__wrapper {
+			width: 940px;
+			min-height: 744px;
+			
+			background-size: 553px 645px;
+			background-position: 346px 100px;
+		}
+		&__wrapper-list {
+			margin-top: 121px;
+		}
+		&__phrase {
+			margin-bottom: 67px;
+		}
+		&__link {
+			margin-bottom: 67px;
+		}
+		&__list {
+			margin-bottom: 68px;
+		}
+	}		
+	.download-app__nojs {
+		padding-top: 110px;
+	}
+}

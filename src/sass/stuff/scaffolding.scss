@@ -1,0 +1,73 @@
+@import "variables.scss";
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),url("../fonts/OpenSans-SemiBold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+
+	background-color: $bg-white;
+
+	color: $text-blue;	
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	font-style: normal;
+}
+
+img {
+	height: auto;
+}
+
+.visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+@media (max-width: $desktop-width - 1) {
+	.visually-hidden__mobile {
+		position: absolute;
+
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+	
+		white-space: nowrap;
+	
+		clip-path: inset(100%);
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+  }
+}
+

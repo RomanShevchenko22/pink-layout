@@ -1,0 +1,116 @@
+@import "../stuff/variables.scss";
+
+.reviews {
+	padding-top: 48px;
+	&__item {
+		margin: 0;	
+	}
+	&__author-name {
+		display: block;
+
+		margin-bottom: 24px;
+
+		text-align: center;
+
+		color: #000000;
+		font-size: 18px;
+    line-height: 30px;
+		font-weight: 700;
+		font-style: normal;
+		& span {
+			display: none;
+		}
+	}
+	&__text {
+		width: 280px;
+		margin: 0 auto;
+
+		text-align: center;
+
+		color: $text-blue;
+		font-size: 14px;
+		line-height: 30px;
+	}
+	&__button {
+		display: none;
+	}
+	&__dots {
+		margin: 0;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		text-align: center;
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.reviews {
+		padding-top: 0;
+		&__cite-wrapper {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		&__author-name {	
+			margin-bottom: 0;	
+	
+			font-size: 20px;
+			& span {
+				display: block;
+
+				color: $text-blue;
+				font-size: 14px;
+				line-height: 30px;
+				font-weight: 400;
+			}
+		}
+		&__text {
+			width: 620px;
+			padding-top: 20px;
+			padding-bottom: 43px;
+
+			font-size: 18px;
+		}
+		&__dots {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.reviews {
+		padding-top: 192px;
+		padding-bottom: 44px;
+		&__wrapper {
+			width: 940px;
+			margin: 0 auto;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+
+				width: 80px;
+				height: 63px;
+
+				left: 430px;
+				top: -120px;
+
+				background-image: url("../img/quotes.svg");
+				background-repeat: no-repeat;
+		    background-size: 80px 63px;
+			}
+		}
+		&__author-name {	
+			font-size: 24px;
+			& span {
+				font-size: 18px;
+			}
+		}
+		&__text {
+			width: 700px;
+			padding-top: 0;
+		}
+
+		&__dots {
+			display: none;
+		}
+  }
+}

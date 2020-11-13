@@ -1,0 +1,32 @@
+@import "variables.scss";
+
+.submit-button {
+	display: block;
+	border: none;
+	width: 100%;
+	padding-top: 17px;
+	padding-bottom: 17px;
+
+	border-radius: 3px;
+	background-color: #2aab6d;
+
+	color: $bg-white;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	&:hover {
+		transition: 0.1s ease;
+		background-color: #1c9b5e;
+	}
+	&:active {
+		transition: none;
+		color: #7dbd99;
+	}
+	&:focus {
+		outline: 1px solid #0b7441c7;
+	}
+	&:disabled {
+		background-color: #e5e5e5;
+	}	
+}

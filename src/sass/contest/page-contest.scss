@@ -1,0 +1,96 @@
+@import "../stuff/variables.scss";
+
+.page-contest {
+	&__head {
+	margin: 0 auto;
+	width: 240px;
+	
+	color: $bg-white;
+	text-align: center;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 200;
+
+	  &-wrapper {	
+	  padding-top: 100px;
+	  padding-bottom: 54px;
+	
+	  background-color: $text-blue;
+	  background-image: url("../img/back-tablet@1x.jpg");
+	  background-repeat: no-repeat;
+	  background-position: center top;
+	  background-size: 830px;
+	  }
+	}	
+	&__advantage {
+		width: 280px;
+		margin: 0 auto;
+		margin-top: 53px;
+		margin-bottom: 48px;
+	
+		text-align: center;
+		color: $text-blue;
+		font-size: 14px;
+		line-height: 30px;
+		& span {
+			display: none;			
+		}
+	}
+}
+
+
+
+@media (min-width: $tablet-width) {
+	.page-contest {
+		&__head {
+			width: 500px;
+
+		  font-size: 50px;
+		  line-height: 57px;
+		  &-wrapper {	
+			  padding-top: 186px;
+			  padding-bottom: 78px;
+
+			  background-size: 1200px;
+		  }
+		}
+		&__advantage {
+			width: 500px;
+			margin-top: 98px;
+			margin-bottom: 74px;
+			font-size: 18px;
+			& span {
+				display: block;
+			}
+		}
+	}		
+}
+
+
+
+
+@media (min-width: $desktop-width) {
+	.page-contest {
+		&__head {
+			width: 820px;
+
+		  &-wrapper {	
+			  padding-top: 180px;
+			  padding-bottom: 100px;
+			
+			  background-color: $text-blue;
+			  background-image: url("../img/back-desktop.jpg");
+			  background-repeat: no-repeat;
+				background-position:  top;
+				background-size: 2560px;
+			}
+		}
+		&__advantage {
+			width: 800px;
+			margin-bottom: 77px;
+			& span {
+				display: inline-block;				
+			}
+		}		
+	}
+}

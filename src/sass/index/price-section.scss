@@ -1,0 +1,241 @@
+@import "../stuff/variables.scss";
+
+.price {
+	background-color: $bg-lightgrey;
+	&__triangle {
+		height: 84px;
+	}
+	&__wrapper {
+		width: 940px;
+		padding-top: 67px;
+		margin: 0 auto;
+		padding-bottom: 95px;
+	}
+	&__toggles {
+		display: none;
+	}
+	&__switcher {
+		display: none;
+	}
+}
+
+.table {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	&__pack {
+		margin: 0;
+		padding-top: 10px;
+		text-align: center;
+
+		color: $bg-white;
+		text-transform: uppercase;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 700;		
+		}
+	&__price {
+		margin: 0;
+		padding-top: 2px;
+		padding-bottom: 15px;
+		text-align: center;
+
+		color: $bg-white;
+		text-transform: uppercase;
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 200;
+	}
+	&__list {
+		background-color: $text-blue;
+		border: 2px solid #e5e5e5;
+		&--hit {
+			background-image: url("../img/hit.png");
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: 74px 73px;	
+		}
+	}
+	&__item {
+		background-color: $bg-white;
+		border: 2px solid #e5e5e5;
+  }
+	&__value {
+		background-color: $bg-white;
+		border: 2px solid #e5e5e5;
+		&--yes {
+			display: block;
+			margin: 0 auto;
+			width: 31px;
+			height: 21px;
+		}
+		&--no {
+			display: block;
+			margin: 0 auto;
+			width: 27px;
+			height: 26px;
+		}
+	}
+	&__item--text {
+		margin: 0;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		display: block;
+		text-align: center;
+
+		color: $text-blue;		
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 400;
+		&--mobile {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: $tablet-width) and  (max-width: $desktop-width - 1){
+	.price {
+		&__triangle {
+			height: 52px;
+		}
+		&__wrapper {
+			width: 620px;
+			padding-top: 37px;
+			margin: 0 auto;
+			padding-bottom: 68px;
+		}
+	}
+	.table {
+		&__pack {
+			padding-top: 9px;
+
+			font-size: 16px;	
+			}
+		&__price {
+			padding-top: 0px;
+			padding-bottom: 7px;
+
+			font-size: 18px;
+		}
+		&__list {
+			&--hit {
+				background-size: 61px 60px;
+			}
+		}
+		&__item--text {
+			padding-top: 8px;
+			padding-bottom: 7px;
+			
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: $tablet-width - 1) {
+	.price {
+		&__triangle {
+			height: 25px;
+		}
+		&__wrapper {			
+			width: 100%;		
+			padding-bottom: 47px;
+
+			overflow: hidden;	
+		}
+		&__list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}	
+		&__toggles {
+			display: flex;
+			margin: 0;
+			padding-top: 40px;
+		}		
+	}
+	
+	#price-radio-1:checked~.price__toggles label[for="price-radio-1"] {
+			&::before {
+				background-color: #ffffff;
+				box-shadow: 0 0 0 3px $text-blue;
+			}
+			&:hover::before {
+				background-color: #ffffff;
+			}
+			&:active::before {	
+				background-color: #ffffff;
+			}
+	}
+	#price-radio-2:checked~.price__toggles label[for="price-radio-2"] { 
+			&::before {
+				background-color: #ffffff;
+				box-shadow: 0 0 0 3px $text-blue;
+			}
+			&:hover::before {
+				background-color: #ffffff;
+			}
+			&:active::before {	
+				background-color: #ffffff;
+			}
+	}
+	#price-radio-3:checked~.price__toggles label[for="price-radio-3"] {
+			&::before {
+				background-color: #ffffff;
+				box-shadow: 0 0 0 3px $text-blue;
+			}
+			&:hover::before {
+				background-color: #ffffff;
+			}
+			&:active::before {	
+				background-color: #ffffff;
+			}
+	}
+
+	.table {
+		width: 840px;
+		box-sizing: border-box;
+		&__item {
+			display: none;
+		}
+		&__mobile {
+			display: none;
+		}
+		&__item--text {
+			padding-left: 17px;
+
+			font-size: 16px;
+			text-transform: uppercase;
+			&--mobile {
+				display:inline-block;
+			}
+		}
+		&__value {
+			&--wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			&--yes {
+				margin: 0;
+				padding-right: 17px;
+			}
+			&--no {
+				margin: 0;
+				padding-right: 17px;
+			}
+		}
+	}
+
+	#price-radio-1:checked~.table {
+	  transform: translateX(280px);
+		transition: 0.5s ease;
+  }
+	#price-radio-2:checked~.table {
+		transform: translateX(0);
+		transition: 0.5s ease;
+	}
+  #price-radio-3:checked~.table {
+		transform: translateX(-280px);
+		transition: 0.5s ease;
+	}
+}
